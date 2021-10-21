@@ -1,38 +1,120 @@
 .App {
   text-align: center;
+  width: 80%;
+  margin: 50px auto 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  background-color: gold;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+li input {
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li button {
+  background-color: red;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+li button:active {
+  background-color: darkorchid;
+}
+
+.done {
+  background-color: greenyellow;
+}
+
+.addTodo {
+  background-color: greenyellow;
+  margin: 5px 0;
+  padding: 15px 5px;
+  border-radius: 5px;
+}
+
+.addTodo input{
+  width: 80%;
+
+}
+
+.addTodo button{
+  border: 0px;
+  border-radius: 3px;
+  padding: 3px;
+  background-color: gold;
+  margin-left: 5px;
+  width: 15%;
+  cursor: pointer;
+}
+
+.addTodo button:active{
+  background-color: red;
+}
+
+
+.lds-heart {
+  margin: 0 auto;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: greenyellow;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: greenyellow;
+}
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
   }
-  to {
-    transform: rotate(360deg);
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
   }
 }
